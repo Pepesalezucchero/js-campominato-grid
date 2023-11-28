@@ -3,3 +3,27 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+/*nav bar*/
+.nav-container {
+    display: flex;
+    /*debug*/
+    min-height: 150px;
+    background-color: aqua;
+    border-bottom: 1px solid black;
+}
+
+/*spazio centrale, debug*/
+.main-container {
+    background-color: blue;
+    width: 100%;
+    min-height: 800px;
+}
+
+/*footer*/
+.credits {
+    /*debug*/
+    min-height: 100px;
+    background-color: aquamarine;
+    border-top: 1px solid red;
+}
