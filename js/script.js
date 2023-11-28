@@ -6,13 +6,25 @@ Quando l’utente clicca su ogni cella, la cella cliccata si colora di azzurro e
 
 const container = document.querySelector(".container");
 
-//aggiungo i numeri nell caselle
-for (let i = 1; i <= 100; i++) {
-    //creo il div con la classe square
-    const square = document.createElement("div");
-    square.classList.add("square");
-    //gli dico di metterci il numero
-    square.append(i);
-    //monto il tutto
-    container.append(square);
+const userSquare = createMyGrid("div", "square");
+
+
+
+
+//funzioni
+
+//funzione per creare la tabella
+function createMyGrid(tagtype, classname) {
+
+    //aggiungo i numeri nell caselle
+    for (let i = 1; i <= 100; i++) {
+        //creo il div con la classe square
+        const square = document.createElement(tagtype);
+        square.classList.add(classname);
+        //gli dico di metterci il numero
+        square.append(i);
+        //monto il tutto
+        container.append(square);
+    }
+    return;
 }
