@@ -38,10 +38,35 @@ h1 {
 }
 
 /*spazio centrale, debug*/
-.main-container {
-    background-color: blue;
+.main-space {
+    background-color: #7fffd4;
     width: 100%;
-    min-height: 800px;
+}
+
+.main-space .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 600px;
+    margin: 0 auto;
+    padding: 90px 0;
+}
+
+.square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border: 1px solid black;
+}
+
+.container span {
+    font-size: 20px;
+}
+
+.azure {
+    background-color: lightskyblue;
 }
 
 /*footer*/
