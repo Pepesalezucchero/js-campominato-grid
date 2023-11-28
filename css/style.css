@@ -22,8 +22,17 @@
 
 /*footer*/
 .credits {
+    display: flex;
+    align-items: center;
     /*debug*/
-    min-height: 100px;
-    background-color: aquamarine;
-    border-top: 1px solid red;
+    min-height: 70px;
+}
+
+.credits span {
+    margin-left: 15px;
+    font-size: 20px;
+}
+
+.credits a {
+    color: #4d1085;
 }
