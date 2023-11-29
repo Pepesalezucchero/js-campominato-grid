@@ -25,12 +25,12 @@ playButton.addEventListener("click",
             square.append(i);
 
             //qui creo la funzione che mi permette di colorare i quadrati al tocco e mi mostra il numero nella console
-            square.addEventListener('click',
+            square.addEventListener("click",
 
-                function() {
+                function () {
 
                     square.classList.add("azure"); //colore
-                    console.log("Hai selezionato la cella numero:", i); //console per visualizzare
+                    console.log("Selezionata la casella numero:", i); //console per visualizzare
                 }
             );
         }
