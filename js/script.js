@@ -4,9 +4,38 @@ Ci saranno quindi 10 caselle per ognuna delle 10 righe.
 Quando l’utente clicca su ogni cella, la cella cliccata si colora di azzurro ed emetto un messaggio in console con il numero della cella cliccata.
 */
 
-const container = document.querySelector(".container");
+//richiamo di elementi
+const container = document.querySelector(".container"); //luogo centrale
+const playButton = document.getElementById("play-btn"); //bottone play
 
-//funzione bottone
+//funzione bottone e per creare la tabella
+playButton.addEventListener("click", 
+
+    function () {
+
+        //aggiungo numeri e caselle
+        for (let i = 1; i <= 100; i++) {
+
+            //creo i quadrati
+            const square = document.createElement("div");
+            square.classList.add("square");
+            container.append(square);
+
+            //ci metto dentro i numeri
+            square.append(i);
+
+            //qui creo la funzione che mi permette di colorare i quadrati al tocco e mi mostra il numero nella console
+            square.addEventListener('click',
+
+                function() {
+
+                    square.classList.add("azure"); //colore
+                    console.log("Hai selezionato la cella numero:", i); //console per visualizzare
+                }
+            );
+        }
+    }
+);
 
 /*
 const userSquare = createMyGrid("div", "square");
@@ -25,32 +54,5 @@ function createMyGrid(tagtype, classname) {
         container.append(square);
     }
     return;
-}
-/*
-
-/*
-for (i = 1; i <= 100; i++) {
-
-    const newElement = createMyElement("div", "square");
-
-        newElement.addEventListener("click",
-        
-        function () {
-            console.log("hai cliccato", (newElement));
-            newElement.classList.add("azure");
-        }
-        
-        )
-
-    container.append(newElement);
-}
-
-function createMyElement(tagtype, classname) {
-
-    const currentElement = document.createElement(tagtype);
-    currentElement.classList.add(classname);
-    currentElement.append(i);
-
-    return currentElement;
 }
 */
